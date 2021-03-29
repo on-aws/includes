@@ -18,10 +18,10 @@ ResponseLambda:
   Type: AWS::Lambda::Function
   Properties:
     Handler: index.handler
-    Role: !GetAtt LambdaRole.Arn
+    Role: !GetAtt ResponseRole.Arn
     Runtime: nodejs12.x
     Code:
-      ZipFile: !Sub |
+      ZipFile: |
         'use strict';
         const https = require("https");
         const url = require("url");
